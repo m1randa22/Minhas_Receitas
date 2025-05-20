@@ -7,7 +7,7 @@
     android:background="#f4e9b3">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageViewLogoNovaSenha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
@@ -15,88 +15,118 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
-
-    <EditText
-        android:id="@+id/emailNovaSenha"
-        android:layout_width="220dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="20dp"
-        android:background="#A9793104"
-        android:ems="10"
-        android:fontFamily="@font/adlam_display"
-        android:hint="Confirme seu Email"
-        android:inputType="numberPassword"
-        android:textColor="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textoConfirmarEmail" />
+        app:srcCompat="@drawable/logo"
+        android:contentDescription="@string/logo_nova_senha" />
 
     <TextView
-        android:id="@+id/textoConfirmarEmail"
+        android:id="@+id/tituloNovaSenhaTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/adlam_display"
+        android:text="@string/titulo_nova_senha"
+        android:textColor="#793104"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewLogoNovaSenha" />
+
+    <TextView
+        android:id="@+id/textoConfirmarEmailTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:fontFamily="@font/adlam_display"
-        android:text="Confirme seu email no campo abaixo:"
+        android:text="@string/texto_confirmar_email"
         android:textColor="#793104"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tituloNovaSenha" />
+        app:layout_constraintTop_toBottomOf="@+id/tituloNovaSenhaTextView" />
 
-    <TextView
-        android:id="@+id/tituloNovaSenha"
+    <ImageView
+        android:id="@+id/iconEmailNovaSenhaImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/emailNovaSenha"
+        app:layout_constraintEnd_toStartOf="@+id/emailNovaSenha"
+        app:layout_constraintTop_toTopOf="@+id/emailNovaSenha"
+        app:srcCompat="@drawable/email_login"
+        android:contentDescription="@string/icone_email_nova_senha" />
+
+    <EditText
+        android:id="@+id/emailNovaSenha"
+        android:layout_width="220dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:background="#793104"
+        android:ems="10"
         android:fontFamily="@font/adlam_display"
-        android:text="Criar nova Senha"
-        android:textColor="#793104"
-        android:textSize="28sp"
+        android:hint="@string/hint_confirmar_email"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#D3D3D3"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textoConfirmarEmailTextView"
+        android:importantForAutofill="no" />
 
     <TextView
-        android:id="@+id/textoCriarSenha"
+        android:id="@+id/textoCriarSenhaTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:fontFamily="@font/adlam_display"
-        android:text="Crie uma nova senha numérica:"
+        android:text="@string/texto_criar_nova_senha"
         android:textColor="#793104"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailNovaSenha" />
 
+    <ImageView
+        android:id="@+id/iconSenhaNovaSenhaImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/senhaNovaSenha"
+        app:layout_constraintEnd_toStartOf="@+id/senhaNovaSenha"
+        app:layout_constraintTop_toTopOf="@+id/senhaNovaSenha"
+        app:srcCompat="@drawable/senha_login"
+        android:contentDescription="@string/icone_senha_nova_senha" />
     <EditText
         android:id="@+id/senhaNovaSenha"
         android:layout_width="220dp"
-        android:layout_height="30dp"
+        android:layout_height="48dp"
         android:layout_marginTop="20dp"
-        android:background="#A9793104"
+        android:background="#793104"
         android:ems="10"
         android:fontFamily="@font/adlam_display"
-        android:hint="Digite sua nova senha"
+        android:hint="@string/hint_nova_senha"
         android:inputType="numberPassword"
-        android:textColor="#000000"
+        android:minHeight="48dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#D3D3D3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textoCriarSenha" />
+        app:layout_constraintTop_toBottomOf="@+id/textoCriarSenhaTextView"
+        android:importantForAutofill="no" />
 
     <Button
         android:id="@+id/botaoNovaSenha"
-        android:layout_width="134dp"
-        android:layout_height="52dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:backgroundTint="#9A793104"
         android:fontFamily="@font/adlam_display"
-        android:text="Criar senha"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:text="@string/botao_criar_senha"
+        android:onClick="criarNovaSenha"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -108,49 +138,24 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:fontFamily="@font/adlam_display"
-        android:text="Este Email não foi encontrado"
+        android:text="@string/erro_email_nao_encontrado"
         android:textColor="#FF0000"
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/botaoNovaSenha"
-        tools:ignore="HardcodedText" />
+        app:layout_constraintTop_toBottomOf="@+id/botaoNovaSenha" />
 
     <TextView
         android:id="@+id/erroSenhaNovaSenha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/adlam_display"
-        android:text="A senha deve conter APENAS números"
+        android:text="@string/erro_senha_apenas_numeros"
         android:visibility="gone"
         android:textColor="#FD0000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/botaoNovaSenha"
-        tools:ignore="HardcodedText" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="32dp"
-        android:layout_height="27dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginEnd="7dp"
-        app:layout_constraintEnd_toStartOf="@+id/emailNovaSenha"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/email_login"
-        tools:layout_editor_absoluteY="397dp" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="31dp"
-        android:layout_height="29dp"
-        android:layout_marginEnd="4dp"
-        app:layout_constraintEnd_toStartOf="@+id/senhaNovaSenha"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/senha_login"
-        tools:layout_editor_absoluteY="493dp" />
+        app:layout_constraintTop_toBottomOf="@+id/erroEmailNovaSenha" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

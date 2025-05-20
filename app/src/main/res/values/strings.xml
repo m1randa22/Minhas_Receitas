@@ -1,3 +1,69 @@
 <resources>
-    <string name="app_name">minhas_receitas</string>
+    <string name="app_name">Minhas Receitas</string>
+
+    <string name="titulo_cadastro">Cadastre-se</string>
+    <string name="hint_nome_cadastro">Digite seu nome</string>
+    <string name="hint_email_cadastro">Digite um email</string>
+    <string name="hint_senha_cadastro">Crie uma senha numérica</string>
+    <string name="botao_criar_conta">Criar Conta</string>
+    <string name="erro_email_cadastrado">Ops! Este email já está cadastrado.</string>
+    <string name="erro_senha_numerica">A senha deve conter APENAS números</string>
+    <string name="erro_email_invalido">Email inválido: app@example.com</string>
+    <string name="logo_cadastro">Logotipo da tela de cadastro</string>
+    <string name="icone_nome_cadastro">Ícone para o campo de nome</string>
+    <string name="icone_email_cadastro">Ícone para o campo de email</string>
+    <string name="icone_senha_cadastro">Ícone para o campo de senha</string>
+    <string name="cadastro_sucesso">Cadastro realizado com sucesso!</string>
+    <string name="erro_cadastro_falha">Erro ao cadastrar. Tente novamente.</string>
+
+    <string name="titulo_login">Login</string>
+    <string name="hint_email_login">Digite seu Email</string>
+    <string name="hint_senha_login">Digite sua senha</string>
+    <string name="botao_entrar">Entrar</string>
+    <string name="texto_nao_tem_conta">Não tem uma conta?</string>
+    <string name="botao_cadastrar">Cadastre-se!</string>
+    <string name="botao_esqueceu_senha">Esqueceu sua senha?</string>
+    <string name="erro_login_falha">Ops! Parece que algo foi digitado errado.</string>
+    <string name="logo_login">Logotipo da tela de login</string>
+    <string name="icone_email_login">Ícone para o campo de email de login</string>
+    <string name="icone_senha_login">Ícone para o campo de senha de login</string>
+
+    <string name="titulo_nova_senha">Nova Senha</string>
+    <string name="texto_confirmar_email">Digite seu email para redefinir a senha.</string>
+    <string name="hint_confirmar_email">Seu email</string>
+    <string name="texto_criar_nova_senha">Digite sua nova senha.</string>
+    <string name="hint_nova_senha">Nova senha</string>
+    <string name="botao_criar_senha">Redefinir Senha</string>
+    <string name="erro_email_nao_cadastrado">Este email não está cadastrado.</string>
+    <string name="erro_senha_apenas_numeros">A senha deve conter apenas números.</string>
+    <string name="logo_nova_senha">Logotipo da tela de nova senha</string>
+    <string name="icone_email_nova_senha">Ícone para o campo de email de nova senha</string>
+    <string name="icone_senha_nova_senha">Ícone para o campo de nova senha</string>
+    <string name="erro_campos_vazios">Por favor, preencha todos os campos.</string>
+    <string name="senha_atualizada_sucesso">Senha atualizada com sucesso!</string>
+    <string name="erro_atualizar_senha">Erro ao atualizar a senha. Tente novamente.</string>
+    <string name="erro_email_nao_encontrado">Este Email não foi encontrado</string> <string name="logo_receita">Logotipo da tela de receitas</string>
+    <string name="hint_nome_receita">Nome da Receita</string>
+    <string name="botao_carregar_imagem">Carregar Imagem</string>
+    <string name="texto_ingredientes">Ingredientes:</string>
+    <string name="texto_modo_preparo">Modo de Preparo:</string>
+    <string name="hint_modo_preparo">Descreva como fazer a receita</string>
+    <string name="botao_salvar">Salvar</string>
+    <string name="botao_salvar_receita">Salvar Receita</string>
+    <string name="imagem_da_receita">Imagem da receita</string>
+    <string name="botao_criar_receita">Criar receita</string>
+    <string name="texto_nenhuma_receita">Parece que você não tem mais nenhuma receita...</string>
+    <string name="imagem_vento_fim_lista">Ícone de vento indicando o fim da lista de receitas</string>
+    <string name="texto_modo_preparo_detalhe">modo de preparo:</string>
+    <string name="ingrediente_ovo">ovo</string>
+    <string name="ingrediente_fuba">fubá mimoso</string>
+    <string name="preparo_bolo_fuba">bata tudo no liquidificador e asse</string>
+    <string name="ingrediente_leite">leite</string>
+    <string name="titulo_receita">bolo de exemplo</string>
+    <string name="texto_ingredientes_detalhe">ingredientes:</string>
+    <string name="icone_excluir_receita">Ícone de lixeira para excluir receita</string>
+    <string name="icone_editar_receita">Ícone de lápis para editar receita</string>
+    <string name="logo_receitas_blog">Logotipo da tela de blog de receitas</string>
+    <string name="erro_login_conta_nao_existe">Você não tem uma conta, cadastre-se para logar.</string>
+
 </resources>

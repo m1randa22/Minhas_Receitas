@@ -1,0 +1,90 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp">
+
+    <TextView
+        android:id="@+id/textoReceitaTitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/adlam_display"
+        android:text="@string/titulo_receita"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iconeExcluir"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="12dp"
+        android:clickable="true"
+        android:contentDescription="@string/icone_excluir_receita"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoPreparo"
+        app:srcCompat="@drawable/lixeira" />
+
+    <ImageView
+        android:id="@+id/iconeEditar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="8dp"
+        android:clickable="true"
+        android:contentDescription="@string/icone_editar_receita"
+        android:focusable="true"
+        app:layout_constraintEnd_toStartOf="@+id/iconeExcluir"
+        app:layout_constraintTop_toBottomOf="@+id/textoPreparo"
+        app:srcCompat="@drawable/editar" />
+
+    <ImageView
+        android:id="@+id/imagemReceita"
+        android:layout_width="220dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="36dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/imagem_da_receita"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoReceitaTitulo"
+        app:srcCompat="@drawable/imagem_quadrado_receita" />
+
+    <TextView
+        android:id="@+id/textoIngredientes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/adlam_display"
+        android:text="@string/texto_ingredientes_detalhe"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagemReceita" />
+
+    <TextView
+        android:id="@+id/textoPreparo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/adlam_display"
+        android:text="@string/texto_modo_preparo_detalhe"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textoIngredientes" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

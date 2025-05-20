@@ -1,30 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="#f4e9b3"
     android:orientation="vertical"
     android:padding="16dp">
 
     <ImageView
         android:id="@+id/logoReceita"
-        android:layout_width="154dp"
-        android:layout_height="155dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="8dp"
-        app:srcCompat="@drawable/logo_receitas" />
+        app:srcCompat="@drawable/logo_receitas"
+        android:contentDescription="@string/logo_receita" />
 
     <EditText
         android:id="@+id/nomeReceita"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
+        android:background="#793104"
         android:fontFamily="@font/adlam_display"
-        android:hint="Nome da Receita"
+        android:hint="@string/hint_nome_receita"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:padding="8dp"
         android:textAlignment="center"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#D3D3D3"
         android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:importantForAutofill="no"  />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -38,7 +46,8 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:background="#EEEEEE"
-            android:scaleType="centerCrop" />
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/imagem_da_receita" />
 
         <Button
             android:id="@+id/botaoUploadImagem"
@@ -47,9 +56,12 @@
             android:layout_marginStart="16dp"
             android:backgroundTint="#9A793104"
             android:fontFamily="@font/adlam_display"
-            android:text="Carregar Imagem"
+            android:minHeight="48dp"
+            android:onClick="carregarImagem"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:text="@string/botao_carregar_imagem"
             android:textSize="16sp" />
-
     </LinearLayout>
 
     <TextView
@@ -58,16 +70,32 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
         android:fontFamily="@font/adlam_display"
-        android:text="Ingredientes:"
+        android:text="@string/texto_ingredientes"
         android:textColor="#793104"
         android:textStyle="bold" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/listaIngredientesReceita"
-        android:layout_width="385dp"
-        android:layout_height="165dp"
+    <LinearLayout
+        android:id="@+id/layoutIngredientes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/botaoAdicionarIngrediente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
         android:layout_marginBottom="8dp"
-        android:nestedScrollingEnabled="false" />
+        android:backgroundTint="#9A793104"
+        android:fontFamily="@font/adlam_display"
+        android:minHeight="48dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="+ Ingrediente"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:onClick="adicionarIngrediente" />
 
     <TextView
         android:id="@+id/preparoReceita"
@@ -75,20 +103,26 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
         android:fontFamily="@font/adlam_display"
-        android:text="Modo de Preparo:"
+        android:text="@string/texto_modo_preparo"
         android:textColor="#793104"
         android:textStyle="bold" />
 
     <EditText
         android:id="@+id/modoPreparoReceita"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginBottom="16dp"
+        android:background="#793104"
         android:fontFamily="@font/adlam_display"
         android:gravity="top|start"
-        android:hint="Descreva como fazer a receita"
+        android:hint="@string/hint_modo_preparo"
+        android:inputType="textMultiLine"
         android:minHeight="100dp"
-        android:textColor="#000000" />
+        android:padding="8dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#D3D3D3"
+        android:layout_weight="1"
+        android:importantForAutofill="no"  />
 
     <Button
         android:id="@+id/botaoSalvarReceita"
@@ -97,14 +131,23 @@
         android:layout_gravity="end"
         android:backgroundTint="#9A793104"
         android:fontFamily="@font/adlam_display"
-        android:text="Salvar"
-        android:textSize="16sp" />
+        android:minHeight="48dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="@string/botao_salvar"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:onClick="salvarReceita" />
 
     <Button
-        android:id="@+id/buttonSalvarEditarReceita"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        android:text="Salvar Receita"
-        android:visibility="gone" />
+    android:id="@+id/buttonSalvarEditarReceita"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="end"
+    android:minHeight="48dp"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:text="@string/botao_salvar_receita"
+    android:visibility="gone" />
+
 </LinearLayout>

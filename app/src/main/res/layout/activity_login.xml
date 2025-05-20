@@ -10,66 +10,15 @@
 
     <ImageView
         android:id="@+id/logoReceitas"
-        android:layout_width="288dp"
-        android:layout_height="258dp"
+        android:layout_width="217dp"
+        android:layout_height="167dp"
         android:layout_marginTop="44dp"
+        android:contentDescription="@string/logo_login"
+        android:maxWidth="288dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo_receitas" />
-
-    <EditText
-        android:id="@+id/senhaLogin"
-        android:layout_width="220dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="20dp"
-        android:background="#A9793104"
-        android:backgroundTint="#793104"
-        android:ems="10"
-        android:fontFamily="@font/adlam_display"
-        android:hint="Digite sua senha"
-        android:inputType="numberPassword"
-        android:textColor="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailLogin" />
-
-    <ImageView
-        android:id="@+id/iconPasswordLogin"
-        android:layout_width="32dp"
-        android:layout_height="22dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="4dp"
-        app:layout_constraintEnd_toStartOf="@+id/senhaLogin"
-        app:layout_constraintTop_toBottomOf="@+id/iconEmailLogin"
-        app:srcCompat="@drawable/senha_login" />
-
-    <ImageView
-        android:id="@+id/iconEmailLogin"
-        android:layout_width="34dp"
-        android:layout_height="20dp"
-        android:layout_marginEnd="4dp"
-        app:layout_constraintEnd_toStartOf="@+id/emailLogin"
-        app:srcCompat="@drawable/email_login"
-        tools:layout_editor_absoluteY="397dp" />
-
-    <EditText
-        android:id="@+id/emailLogin"
-        android:layout_width="220dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="24dp"
-        android:background="#A9793104"
-        android:backgroundTint="#793104"
-        android:ems="10"
-        android:fontFamily="@font/adlam_display"
-        android:hint="Digite seu Email"
-        android:inputType="textEmailAddress"
-        android:textColor="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/subtituloLogin" />
 
     <TextView
         android:id="@+id/subtituloLogin"
@@ -77,66 +26,137 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:fontFamily="@font/adlam_display"
-        android:text="Login"
+        android:text="@string/titulo_login"
         android:textColor="#793104"
         android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logoReceitas" />
 
+    <ImageView
+        android:id="@+id/iconEmailLogin"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="4dp"
+        android:contentDescription="@string/icone_email_login"
+        app:layout_constraintBottom_toBottomOf="@+id/emailLogin"
+        app:layout_constraintEnd_toStartOf="@+id/emailLogin"
+        app:layout_constraintTop_toTopOf="@+id/emailLogin"
+        app:srcCompat="@drawable/email_login" />
+
+    <EditText
+        android:id="@+id/emailLogin"
+        android:layout_width="220dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:background="#793104"
+        android:ems="10"
+        android:fontFamily="@font/adlam_display"
+        android:hint="@string/hint_email_login"
+        android:importantForAutofill="no"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#D3D3D3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subtituloLogin" />
+
+    <ImageView
+        android:id="@+id/iconPasswordLogin"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="4dp"
+        android:contentDescription="@string/icone_senha_login"
+        app:layout_constraintBottom_toBottomOf="@+id/senhaLogin"
+        app:layout_constraintEnd_toStartOf="@+id/senhaLogin"
+        app:layout_constraintTop_toTopOf="@+id/senhaLogin"
+        app:srcCompat="@drawable/senha_login" />
+
+    <EditText
+        android:id="@+id/senhaLogin"
+        android:layout_width="220dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:background="#793104"
+        android:ems="10"
+        android:fontFamily="@font/adlam_display"
+        android:hint="@string/hint_senha_login"
+        android:importantForAutofill="no"
+        android:inputType="numberPassword"
+        android:minHeight="48dp"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#D3D3D3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailLogin" />
+
     <Button
         android:id="@+id/botaoEntrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="180dp"
+        android:layout_marginTop="88dp"
         android:backgroundTint="#9A793104"
         android:fontFamily="@font/adlam_display"
-        android:text="Entrar"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:onClick="login"
+        android:text="@string/botao_entrar"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/subtituloLogin" />
-
-    <Button
-        android:id="@+id/botaoCadastrar"
-        android:layout_width="141dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="#A9793104"
-        android:fontFamily="@font/adlam_display"
-        android:text="Cadastre-se!"
-        android:textColor="#E4E4E4"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textoConta" />
+        app:layout_constraintTop_toBottomOf="@+id/senhaLogin" />
 
     <TextView
         android:id="@+id/textoConta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="64dp"
         android:fontFamily="@font/adlam_display"
-        android:text="Não tem uma conta?"
+        android:text="@string/texto_nao_tem_conta"
         android:textColor="#793104"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="53dp" />
+        app:layout_constraintEnd_toStartOf="@+id/botaoCadastrar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/botaoCadastrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="52dp"
+        android:backgroundTint="#A9793104"
+        android:fontFamily="@font/adlam_display"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:onClick="abrirTelaCadastrar"
+        android:text="@string/botao_cadastrar"
+        android:textColor="#E4E4E4"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textoConta" />
 
     <Button
         android:id="@+id/botaoEsqueceuSenha"
-        android:layout_width="216dp"
-        android:layout_height="45dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:backgroundTint="#00FFFFFF"
         android:fontFamily="@font/adlam_display"
-        android:text="Esqueceu sua senha?"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:text="@string/botao_esqueceu_senha"
         android:textColor="#793104"
         android:textSize="16sp"
+        android:onClick="abrirTelaNovaSenha"
         app:layout_constraintBottom_toTopOf="@+id/botaoEntrar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/senhaLogin"
         app:layout_constraintVertical_bias="0.8" />
@@ -147,13 +167,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:fontFamily="@font/adlam_display"
-        android:text="Ops! Parece que algo foi digitado errado."
+        android:text="@string/erro_login_falha"
         android:visibility="gone"
         android:textColor="#FF0000"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/botaoEntrar"
-        tools:ignore="HardcodedText" />
+        app:layout_constraintTop_toBottomOf="@+id/botaoEntrar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
