@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingTop="32dp"
+    android:paddingBottom="48dp"
+    android:background="#f4e9b3">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/adlam_display"
+        android:text="@string/texto_nenhuma_receita"
+        android:textColor="#793104"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:layout_width="42dp"
+        android:layout_height="37dp"
+        android:contentDescription="@string/imagem_vento_fim_lista"
+        android:scaleType="fitCenter"
+        android:src="@drawable/vento_receita" />
+
+</LinearLayout>

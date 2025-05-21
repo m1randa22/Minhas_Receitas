@@ -8,25 +8,26 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="152dp"
+        android:layout_height="157dp"
         android:layout_marginTop="56dp"
+        android:contentDescription="@string/logo_cadastro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo"
-        android:contentDescription="@string/logo_cadastro" />
+        app:srcCompat="@drawable/logo" />
 
     <TextView
         android:id="@+id/tituloCadastro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="36dp"
         android:fontFamily="@font/adlam_display"
         android:text="@string/titulo_cadastro"
         android:textColor="#793104"
         android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
@@ -45,10 +46,11 @@
         android:id="@+id/nomeCadastro"
         android:layout_width="220dp"
         android:layout_height="48dp"
-        android:layout_marginTop="32dp"
-        android:background="#793104"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/input_background"
         android:ems="10"
         android:fontFamily="@font/adlam_display"
+        android:gravity="center"
         android:hint="@string/hint_nome_cadastro"
         android:inputType="text"
         android:minHeight="48dp"
@@ -56,6 +58,7 @@
         android:textColorHint="#D3D3D3"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tituloCadastro" />
 
@@ -75,11 +78,12 @@
         android:layout_width="220dp"
         android:layout_height="48dp"
         android:layout_marginTop="16dp"
-        android:background="#793104"
         android:ems="10"
         android:fontFamily="@font/adlam_display"
         android:hint="@string/hint_email_cadastro"
         android:inputType="textEmailAddress"
+        android:background="@drawable/input_background"
+        android:gravity="center"
         android:minHeight="48dp"
         android:textColor="#FFFFFF"
         android:textColorHint="#D3D3D3"
@@ -91,25 +95,27 @@
 
     <ImageView
         android:id="@+id/iconSenhaCadastro"
-        android:layout_width="41dp"
-        android:layout_height="34dp"
+        android:layout_width="43dp"
+        android:layout_height="38dp"
         android:layout_marginEnd="12dp"
+        android:contentDescription="@string/icone_senha_cadastro"
         app:layout_constraintBottom_toBottomOf="@+id/senhaCadastro"
         app:layout_constraintEnd_toStartOf="@+id/senhaCadastro"
         app:layout_constraintTop_toTopOf="@+id/senhaCadastro"
-        app:srcCompat="@drawable/senha_login"
-        android:contentDescription="@string/icone_senha_cadastro" />
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/senha_login" />
 
     <EditText
         android:id="@+id/senhaCadastro"
         android:layout_width="220dp"
         android:layout_height="48dp"
         android:layout_marginTop="16dp"
-        android:background="#793104"
+        android:background="@drawable/input_background"
         android:ems="10"
         android:fontFamily="@font/adlam_display"
         android:hint="@string/hint_senha_cadastro"
         android:inputType="numberPassword"
+        android:gravity="center"
         android:minHeight="48dp"
         android:textColor="#FFFFFF"
         android:textColorHint="#D3D3D3"
@@ -121,17 +127,17 @@
 
     <Button
         android:id="@+id/botaoCriarCadastro"
-        android:layout_width="143dp"
-        android:layout_height="54dp"
+        android:layout_width="146dp"
+        android:layout_height="57dp"
         android:layout_marginTop="40dp"
-        android:backgroundTint="#9A793104"
+        android:backgroundTint="#591707"
         android:fontFamily="@font/adlam_display"
+        android:onClick="cadastrarUsuario"
         android:text="@string/botao_criar_conta"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/senhaCadastro"
-        android:onClick="cadastrarUsuario" />
+        app:layout_constraintTop_toBottomOf="@+id/senhaCadastro" />
 
     <TextView
         android:id="@+id/mensagemErroCadastro"

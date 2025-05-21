@@ -10,20 +10,22 @@
 
     <ImageView
         android:id="@+id/logoReceitas"
-        android:layout_width="150dp"  android:layout_height="150dp" android:layout_marginTop="28dp"
-        android:scaleType="centerInside"
+        android:layout_width="201dp"
+        android:layout_height="167dp"
+        android:layout_marginTop="28dp"
+        android:contentDescription="@string/logo_receitas_blog"
+        android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo_receitas"
-        android:contentDescription="@string/logo_receitas_blog" />
+        app:srcCompat="@drawable/logo_receitas" />
 
     <Button
         android:id="@+id/botaoCriarReceita"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="157dp"
+        android:layout_height="53dp"
         android:layout_marginTop="17dp"
-        android:backgroundTint="#9A793104"
+        android:backgroundTint="#591707"
         android:fontFamily="@font/adlam_display"
         android:onClick="abrirTelaCriarReceita"
         android:text="@string/botao_criar_receita"
@@ -31,6 +33,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logoReceitas" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/shadow_bottom"
+        app:layout_constraintTop_toBottomOf="@+id/botaoCriarReceita"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listaReceitas"
@@ -40,32 +51,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/botaoCriarReceita"
         app:layout_constraintBottom_toBottomOf="parent" tools:listitem="@layout/item_receita" />
-
-    <TextView
-        android:id="@+id/textoNenhumaReceita"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/adlam_display"
-        android:text="@string/texto_nenhuma_receita"
-        android:textColor="#793104"
-        android:textSize="14sp"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/botaoCriarReceita"
-        app:layout_constraintBottom_toTopOf="@+id/imagemVentoReceita"
-        app:layout_constraintVertical_chainStyle="packed"
-        tools:visibility="visible" />
-
-    <ImageView
-    android:id="@+id/imagemVentoReceita"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:visibility="gone"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/textoNenhumaReceita"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:srcCompat="@drawable/vento_receita"
-    android:contentDescription="@string/imagem_vento_fim_lista"
-    tools:visibility="visible" /> </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

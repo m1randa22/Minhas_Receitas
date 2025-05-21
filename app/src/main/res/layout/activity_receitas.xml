@@ -21,18 +21,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:background="#793104"
+        android:background="@drawable/input_background"
         android:fontFamily="@font/adlam_display"
+        android:gravity="center"
         android:hint="@string/hint_nome_receita"
+        android:importantForAutofill="no"
         android:inputType="text"
         android:minHeight="48dp"
         android:padding="8dp"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textColorHint="#D3D3D3"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:importantForAutofill="no"  />
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -72,6 +73,7 @@
         android:fontFamily="@font/adlam_display"
         android:text="@string/texto_ingredientes"
         android:textColor="#793104"
+        android:textSize="16sp"
         android:textStyle="bold" />
 
     <LinearLayout
@@ -90,12 +92,12 @@
         android:backgroundTint="#9A793104"
         android:fontFamily="@font/adlam_display"
         android:minHeight="48dp"
+        android:onClick="adicionarIngrediente"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
         android:text="+ Ingrediente"
         android:textColor="#FFFFFF"
-        android:textSize="16sp"
-        android:onClick="adicionarIngrediente" />
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/preparoReceita"
@@ -105,6 +107,7 @@
         android:fontFamily="@font/adlam_display"
         android:text="@string/texto_modo_preparo"
         android:textColor="#793104"
+        android:textSize="16sp"
         android:textStyle="bold" />
 
     <EditText
@@ -112,32 +115,33 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginBottom="16dp"
-        android:background="#793104"
+        android:layout_weight="1"
+        android:background="@drawable/input_background"
         android:fontFamily="@font/adlam_display"
-        android:gravity="top|start"
+        android:gravity="top|center"
         android:hint="@string/hint_modo_preparo"
+        android:importantForAutofill="no"
         android:inputType="textMultiLine"
         android:minHeight="100dp"
         android:padding="8dp"
         android:textColor="#FFFFFF"
         android:textColorHint="#D3D3D3"
-        android:layout_weight="1"
-        android:importantForAutofill="no"  />
+        android:textSize="16sp" />
 
     <Button
         android:id="@+id/botaoSalvarReceita"
-        android:layout_width="wrap_content"
+        android:layout_width="106dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        android:backgroundTint="#9A793104"
+        android:layout_gravity="center"
+        android:backgroundTint="#591707"
         android:fontFamily="@font/adlam_display"
         android:minHeight="48dp"
+        android:onClick="salvarReceita"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
         android:text="@string/botao_salvar"
         android:textColor="#FFFFFF"
-        android:textSize="16sp"
-        android:onClick="salvarReceita" />
+        android:textSize="16sp" />
 
     <Button
     android:id="@+id/buttonSalvarEditarReceita"

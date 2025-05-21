@@ -52,13 +52,11 @@
     <string name="botao_salvar_receita">Salvar Receita</string>
     <string name="imagem_da_receita">Imagem da receita</string>
     <string name="botao_criar_receita">Criar receita</string>
-    <string name="texto_nenhuma_receita">Parece que você não tem mais nenhuma receita...</string>
+    <string name="texto_nenhuma_receita">Parece que não há mais nenhuma receita…</string>
     <string name="imagem_vento_fim_lista">Ícone de vento indicando o fim da lista de receitas</string>
     <string name="texto_modo_preparo_detalhe">modo de preparo:</string>
-    <string name="ingrediente_ovo">ovo</string>
-    <string name="ingrediente_fuba">fubá mimoso</string>
-    <string name="preparo_bolo_fuba">bata tudo no liquidificador e asse</string>
-    <string name="ingrediente_leite">leite</string>
+    <string name="titulo_ingredientes">Ingredientes:</string>
+    <string name="titulo_modo_preparo">Modo de Preparo:</string>
     <string name="titulo_receita">bolo de exemplo</string>
     <string name="texto_ingredientes_detalhe">ingredientes:</string>
     <string name="icone_excluir_receita">Ícone de lixeira para excluir receita</string>
